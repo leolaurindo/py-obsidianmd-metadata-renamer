@@ -32,7 +32,9 @@ class MetadataRenamer:
                            older key to be renamed.
             meta_type (MetadataType): The type of metadata to rename, with default
                                       Check the original lib for more information.
-            apply (bool): If True, the changes will be applied to the notes.
+            apply (bool): If True, the changes will be applied to the notes. If 
+                          False, changes are staged but not saved until
+                          `apply()` is called.
         """
         for note in self.notes.notes:
             if note.metadata.has(old_key, meta_type=meta_type):
