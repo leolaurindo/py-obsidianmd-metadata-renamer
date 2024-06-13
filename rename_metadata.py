@@ -20,7 +20,7 @@ class MetadataRenamer:
     def rename_metadata_key(self, 
                             old_key: str, 
                             new_key: str, 
-                            meta_type: MetadataType = MetadataType.DEFAULT,
+                            meta_type: MetadataType = MetadataType.FRONTMATTER,
                             apply: bool = False):
         """Renames a metadata key for all notes within the Notes object.
 
@@ -30,7 +30,9 @@ class MetadataRenamer:
             new_key (str): The new name for the new metadata key that will be
                            created and receive the values retrieved from the
                            older key to be renamed.
-            meta_type (MetadataType): The type of metadata to rename, with default
+            meta_type (MetadataType): The type of metadata to rename, with default.
+                                      It must be either MetadataType.FRONTMATTER or
+                                      MetadataType.INLINE.
                                       Check the original lib for more information.
             apply (bool): If True, the changes will be applied to the notes. If 
                           False, changes are staged but not saved until
