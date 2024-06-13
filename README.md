@@ -1,6 +1,6 @@
 # MetadataRenamer
 
-`MetadataRenouncer` is a versatile Python tool designed to rename metadata keys within notes managed by the `py-obsidianmd` library. It receives either a `Path` object or the `Notes` object built inside the original `py-obsidianmd`.
+`MetadataRenamer` is a versatile Python tool designed to rename metadata keys within notes managed by the `py-obsidianmd` library. It receives either a `Path` object or the `Notes` object built inside the original `py-obsidianmd`.
 
 This tool is a simple prototype developed to extend the functionality of an existing project, offering an easy way to rename metadata fields.
 
@@ -78,6 +78,7 @@ You can then apply those changes with the `apply()` method or set as a parameter
 
 ```python
 renamer.apply()
+
 # OR
 
 renamer.rename_metadata_key(old_key='old_key',new_key='new_key', meta_type=MetadataType.DEFAULT)
