@@ -81,7 +81,7 @@ renamer.apply()
 
 # OR
 
-renamer.rename_metadata_key(old_key='old_key',new_key='new_key', meta_type=MetadataType.DEFAULT)
+renamer.rename_metadata_key(old_key='old_key', new_key='new_key', meta_type=MetadataType.DEFAULT, apply=True)
 ```
 
 # Conclusion
